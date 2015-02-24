@@ -36,7 +36,13 @@ public class MessageFragment extends Fragment {
     }
 
     @Subscribe public void buttonClicked(ButtonClickedEvent event) {
-        mTextViewMensaje.setText(String.format(
-                getResources().getString(R.string.boton_presionado), event.getButton()));
+        String cualBoton = event.getButton();
+        if (cualBoton.isEmpty()) {
+            mTextViewMensaje.setText(getResources().getString(R.string.ningun_boton_presionado));
+        }
+        else {
+            mTextViewMensaje.setText(String.format(
+                    getResources().getString(R.string.boton_presionado), event.getButton()));
+        }
     }
 }

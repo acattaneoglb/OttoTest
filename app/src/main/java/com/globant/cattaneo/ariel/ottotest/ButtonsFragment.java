@@ -18,7 +18,7 @@ public class ButtonsFragment extends Fragment {
 
     Button mButton1, mButton2;
 
-    String mLastPressed = "ninguno";
+    String mLastPressed = "";
 
     public ButtonsFragment() {
         // Required empty public constructor
